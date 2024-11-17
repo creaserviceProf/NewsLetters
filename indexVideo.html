@@ -64,12 +64,23 @@
             color: #CCC;
             margin: 0;
         }
-        .rainbow-text {
-            background: linear-gradient(to left, violet, mediumblue, cyan, green, yellow, orange, red);
-            -webkit-background-clip: text;
-            color: transparent;
-            display: inline;
-        }
+.rainbow-text {
+    background: linear-gradient(to right, violet, mediumblue, cyan, green, yellow, orange, red, violet, mediumblue, cyan, green);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+    background-size: 340% 100%; /* Ensure sufficient width for smooth movement */
+    animation: gradientMove 8s linear infinite; /* Duration matches gradient width for seamless looping */
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%; /* Start position */
+    }
+    100% {
+        background-position: 100% 50%; /* End position matches start for seamless loop */
+    }
+}
         hr {
             border: none;
             height: 1px;
@@ -96,6 +107,29 @@
         <div class="newsletter-intro">
             AI Video Generators Newsletter by Stéphane Vernet
         </div>
+
+
+
+
+
+      <!-- Recraft AI - New Section -->
+      <h2>Recraft AI</h2>
+      <div class="flex-container">
+        <a href="https://www.recraft.ai" target="_blank">
+          <div className="relative w-[300px] h-[169px] overflow-hidden">
+            <img 
+              src="https://subscribed.fyi/wp-content/uploads/2024/02/Revolutionize-Visuals-with-Recraft_-AI-for-High-Quality-Images-in-Your-Style.jpg" alt="Recraft AI" class="medium-image"/>
+          </div>
+        </a>
+        <div class="text-content">
+          <p>
+            Recraft AI est une plateforme innovante qui combine la génération de vidéos et d'animations avec des capacités d'édition avancées. Elle se distingue par sa capacité à transformer des concepts créatifs en contenu vidéo dynamique, offrant des outils de personnalisation poussés pour les styles visuels et les transitions. La plateforme propose également des fonctionnalités de collaboration en temps réel, idéales pour les équipes créatives travaillant sur des projets vidéo complexes.
+          </p>
+        </div>
+      </div>
+      <hr />
+
+
 
         <!-- Runway ML Section -->
         <h2>Runway ML</h2>
@@ -327,6 +361,10 @@
                 <p>Veed.io propose des outils de montage vidéo avec des fonctionnalités IA comme la génération de sous-titres automatiques et la transformation de texte en vidéo. La version gratuite offre des fonctionnalités de base avec un filigrane.</p>
             </div>
         </div>
+
+
+
+
     </div>
  <!-- Three.js and Animation Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
